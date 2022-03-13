@@ -1,0 +1,126 @@
+body{
+  font-family: "Cabin";
+  
+}
+/* Navbar */
+.navbar{
+  background-color:#373A3C ;
+  width: 100vw;
+}
+
+.navbar-brand{
+  font-family: "Lobster";
+  font-weight: 400;
+  font-size: 37px;
+}
+
+
+
+/* Principal */
+.contenedor2 p:first-child{
+  color: #373A3C;
+  font-family: "Cabin";
+  font-size: 40px;
+}
+
+.contenedor2 p{
+  font-size: 20px;
+}
+
+/* Recetas */
+
+.fuente-p{
+  font-family: "Cabin";
+  font-weight: 400;
+  color: #373A3C;
+  font-size: 20px;
+
+}
+
+#Recetas h2{
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+.alinear{
+  text-align: left;
+}
+
+/* Sección Tarjetas*/
+
+#Tarjetas h2{
+  color: #373A3C;
+  font-family: "Cabin";
+  font-weight: 700;
+  font-size: 40;
+}
+
+.card-title{
+  font-weight: 700;
+  font-size: 23px;
+}
+
+.car-text{
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.card-title, .car-text{
+  color: #373A3C;
+  font-family: "Cabin";
+}
+
+
+/* Sección Suscribir */
+
+#Suscribir{
+  background-color: #DC3545;
+  height: 400px;
+}
+
+.suscribete{
+  font-family: "Cabin";
+  font-size: 40px;
+}
+
+.ricomida-texto1{
+  font-family: "Lobster"; 
+  font-weight: 400;
+
+}
+
+.mejores-recetas{
+  font-family: "Cabin";
+  font-weight: 400;
+  font-size: 30px ;
+}
+
+.boton-empezar{
+  background-color: #DC3545;
+  border-radius: 5px;
+  border: #DDDDDD;
+  border-style: solid;
+  font-family: "Cabin";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+/* Footer */
+footer{
+  background-color:#373A3C ;
+}
+.contenedor-footer{
+  height: 20rem;
+  }
+.ricomida-footer{
+  background-color: #373A3C;
+  height: 7rem;
+  font-family: "Lobster";
+  font-weight: 400;
+  font-size: 37px;
+  align-content: center;
+}
+
+
