@@ -1,7 +1,10 @@
 body{
   font-family: "Cabin";
-  
-}
+}  
+.fa-github{
+  color: #DDDDDD;
+} 
+
 /* Navbar */
 .navbar{
   background-color:#373A3C ;
