@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Perfil profesional de Nombre Apellido, desarrollador de software.">
+  <title>Nombre Apellido | Desarrollador de Software</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #1f2430;
+      --muted: #5d6677;
+      --accent: #2f6fed;
+      --accent-soft: #e6eefe;
+      --border: #e3e6ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12151c;
+        --card: #1a1e28;
+        --text: #e8eaf0;
+        --muted: #9aa3b5;
+        --accent: #6a9bff;
+        --accent-soft: #232c45;
+        --border: #2a3040;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .wrap { display: flex; flex-wrap: wrap; gap: 4px 20px; padding-top: 12px; padding-bottom: 12px; }
+    nav a { color: var(--muted); font-size: .95rem; font-weight: 500; }
+    nav a:hover { color: var(--accent); text-decoration: none; }
+
+    .hero { padding: 56px 0 40px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center; }
+    .avatar {
+      width: 132px; height: 132px; border-radius: 50%;
+      background: var(--accent-soft); color: var(--accent);
+      display: grid; place-items: center;
+      font-size: 2.6rem; font-weight: 700; flex-shrink: 0;
+      border: 3px solid var(--accent);
+    }
+    .hero h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.15; }
+    .hero .role { color: var(--accent); font-weight: 600; font-size: 1.15rem; margin: 4px 0 10px; }
+    .hero p { color: var(--muted); max-width: 540px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn {
+      display: inline-block; padding: 9px 18px; border-radius: 8px;
+      font-weight: 600; font-size: .95rem; border: 1px solid var(--accent);
+    }
+    .btn.primary { background: var(--accent); color: #fff; }
+    .btn.ghost { color: var(--accent); }
+    .btn:hover { text-decoration: none; opacity: .88; }
+
+    section { padding: 36px 0; }
+    h2 {
+      font-size: 1.4rem; margin-bottom: 20px;
+      padding-bottom: 8px; border-bottom: 2px solid var(--accent-soft);
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px;
+    }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+    .stats { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); margin-top: 20px; }
+    .stat { text-align: center; }
+    .stat strong { display: block; font-size: 1.8rem; color: var(--accent); }
+    .stat span { color: var(--muted); font-size: .88rem; }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .tag {
+      background: var(--accent-soft); color: var(--accent);
+      padding: 3px 11px; border-radius: 999px; font-size: .85rem; font-weight: 500;
+    }
+    .card h3 { font-size: 1.05rem; margin-bottom: 2px; }
+    .card .meta { color: var(--muted); font-size: .88rem; margin-bottom: 8px; }
+    .card ul { padding-left: 18px; color: var(--muted); font-size: .95rem; }
+    .card li { margin-top: 4px; }
+
+    .timeline { border-left: 2px solid var(--accent-soft); padding-left: 22px; display: grid; gap: 18px; }
+    .timeline .card { position: relative; }
+    .timeline .card::before {
+      content: ""; position: absolute; left: -30px; top: 24px;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--accent); border: 3px solid var(--bg);
+    }
+
+    .contact { display: flex; flex-wrap: wrap; gap: 24px; }
+    .contact div { min-width: 200px; }
+    .contact small { display: block; color: var(--muted); }
+
+    footer { text-align: center; color: var(--muted); font-size: .85rem; padding: 28px 16px 40px; }
+    @media print { nav, .actions { display: none; } body { background: #fff; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#educacion">Educación</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<header class="wrap hero">
+  <div class="avatar" aria-hidden="true">NA</div>
+  <div>
+    <h1>Nombre Apellido</h1>
+    <p class="role">Desarrollador de Software Full Stack</p>
+    <p>Construyo aplicaciones web rápidas, accesibles y mantenibles. Me motiva resolver problemas reales con código limpio y trabajo en equipo.</p>
+    <div class="actions">
+      <a class="btn primary" href="#contacto">Contáctame</a>
+      <a class="btn ghost" href="#proyectos">Ver proyectos</a>
+      <a class="btn ghost" href="#" onclick="window.print(); return false;">Descargar CV (PDF)</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <div class="card">
+      <p>Soy desarrollador de software con más de 3 años de experiencia creando soluciones web de principio a fin: desde el diseño de APIs y bases de datos hasta interfaces responsivas. Disfruto aprender nuevas tecnologías, escribir código legible y colaborar con equipos multidisciplinarios para entregar valor de forma constante.</p>
+      <div class="stats">
+        <div class="stat"><strong>3+</strong><span>años de experiencia</span></div>
+        <div class="stat"><strong>15</strong><span>proyectos entregados</span></div>
+        <div class="stat"><strong>6</strong><span>tecnologías principales</span></div>
+        <div class="stat"><strong>B2</strong><span>inglés</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <h2>Habilidades</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Frontend</h3>
+        <div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span class="tag">React</span><span class="tag">Bootstrap</span></div>
+      </div>
+      <div class="card">
+        <h3>Backend</h3>
+        <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Python</span><span class="tag">REST APIs</span></div>
+      </div>
+      <div class="card">
+        <h3>Datos y herramientas</h3>
+        <div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">Git / GitHub</span><span class="tag">Docker</span></div>
+      </div>
+      <div class="card">
+        <h3>Habilidades blandas</h3>
+        <div class="tags"><span class="tag">Trabajo en equipo</span><span class="tag">Comunicación</span><span class="tag">Resolución de problemas</span><span class="tag">Metodologías ágiles</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <h2>Experiencia laboral</h2>
+    <div class="timeline">
+      <div class="card">
+        <h3>Desarrollador Full Stack — Empresa Ejemplo S.A.</h3>
+        <div class="meta">2023 – Actualidad</div>
+        <ul>
+          <li>Desarrollo de funcionalidades en una plataforma web usada por más de 5.000 usuarios.</li>
+          <li>Diseño de APIs REST y optimización de consultas, reduciendo tiempos de respuesta en un 30%.</li>
+          <li>Participación en revisiones de código y mejora del flujo de despliegue.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Desarrollador Frontend Jr. — Agencia Digital XYZ</h3>
+        <div class="meta">2021 – 2023</div>
+        <ul>
+          <li>Maquetación de sitios responsivos para clientes de distintos rubros.</li>
+          <li>Implementación de buenas prácticas de accesibilidad y SEO.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos destacados</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Ricomida</h3>
+        <div class="meta">Sitio de recetas · HTML, CSS, Bootstrap, jQuery</div>
+        <p style="color:var(--muted);font-size:.95rem">Sitio web responsivo con catálogo de recetas, slider de imágenes y diseño adaptable a móviles.</p>
+        <p style="margin-top:8px"><a href="../index.html">Ver proyecto →</a></p>
+      </div>
+      <div class="card">
+        <h3>Gestor de Tareas</h3>
+        <div class="meta">Aplicación web · React, Node.js, MongoDB</div>
+        <p style="color:var(--muted);font-size:.95rem">App para organizar tareas con autenticación de usuarios, filtros y panel de estadísticas.</p>
+        <p style="margin-top:8px"><a href="#">Ver código →</a></p>
+      </div>
+      <div class="card">
+        <h3>API de Inventario</h3>
+        <div class="meta">Backend · Express, PostgreSQL, Docker</div>
+        <p style="color:var(--muted);font-size:.95rem">API REST documentada con control de stock, roles de usuario y pruebas automatizadas.</p>
+        <p style="margin-top:8px"><a href="#">Ver código →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="educacion">
+    <h2>Educación y certificaciones</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Ingeniería en Informática</h3>
+        <div class="meta">Universidad Ejemplo · 2017 – 2021</div>
+      </div>
+      <div class="card">
+        <h3>Bootcamp Desarrollo Web Full Stack</h3>
+        <div class="meta">Academia Ejemplo · 2021</div>
+      </div>
+      <div class="card">
+        <h3>Certificación JavaScript Avanzado</h3>
+        <div class="meta">Plataforma Ejemplo · 2022</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <div class="card contact">
+      <div><small>Correo</small><a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a></div>
+      <div><small>Teléfono</small><a href="tel:+56900000000">+56 9 0000 0000</a></div>
+      <div><small>LinkedIn</small><a href="https://linkedin.com/in/usuario">linkedin.com/in/usuario</a></div>
+      <div><small>GitHub</small><a href="https://github.com/usuario">github.com/usuario</a></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>© 2026 Nombre Apellido · Disponible para nuevas oportunidades</footer>
+
+</body>
+</html>
